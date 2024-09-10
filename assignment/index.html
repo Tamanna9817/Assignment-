@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Invoice Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="header">
+            <img src="https://logo-base.com/logo/amazon-logo.png" alt="Company Logo" class="logo">
+            <h2>Invoice</h2>
+        </div>
+
+        <div class="seller-details">
+            <h3>Seller Details</h3>
+            <p id="sellerName">[Seller Name]</p>
+            <p id="sellerAddress">[Seller Address]</p>
+            <p id="sellerPAN">PAN No: [Seller PAN]</p>
+            <p id="sellerGST">GST Reg No: [Seller GST]</p>
+        </div>
+
+        <div class="billing-shipping-details">
+            <div class="billing">
+                <h3>Billing Details</h3>
+                <p id="billingName">[Billing Name]</p>
+                <p id="billingAddress">[Billing Address]</p>
+                <p id="billingState">[Billing City, State, Pincode, State Code]</p>
+            </div>
+            <div class="shipping">
+                <h3>Shipping Details</h3>
+                <p id="shippingName">[Shipping Name]</p>
+                <p id="shippingAddress">[Shipping Address]</p>
+                <p id="shippingState">[Shipping City, State, Pincode, State Code]</p>
+            </div>
+        </div>
+
+        <div class="order-details">
+            <p>Order No: <span id="orderNo">[Order No]</span></p>
+            <p>Invoice No: <span id="invoiceNo">[Invoice No]</span></p>
+            <p>Order Date: <span id="orderDate">[Order Date]</span></p>
+            <p>Invoice Date: <span id="invoiceDate">[Invoice Date]</span></p>
+            <p>Reverse Charge: <span id="reverseCharge">[Yes/No]</span></p>
+        </div>
+
+        <table class="item-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Discount</th>
+                    <th>Net Amount</th>
+                    <th>Tax Rate</th>
+                    <th>Tax Amount</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody id="itemTableBody">
+                <!-- Items will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div class="total">
+            <h3>Total: <span id="totalAmount">₹[Total]</span></h3>
+            <p id="amountInWords">Amount in words: [Amount in Words]</p>
+        </div>
+
+        <div class="signature">
+            
+                
+                <input id="signature" type="text" placeholder="Enter Your Signature" width="100px" padding="50px">
+            </div>
+            <img id="signatureImage" src="" alt="Signature" style="display: none;">
+            <p>For <span id="sellerSignatureName">[Seller Name]</span></p>
+            <p>Authorised Signatory</p>
+        </div>
+        
+
+        <button id="generatePDF">Generate PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

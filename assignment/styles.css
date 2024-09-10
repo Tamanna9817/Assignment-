@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.invoice-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 150px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seller-details, .billing-shipping-details, .order-details {
+    margin-top: 20px;
+}
+
+.billing-shipping-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.item-table th, .item-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* styles.css */
+
+.signature {
+    text-align: center;
+     margin-top: 20px;
+}
+#signature{
+    margin-right: 50px;
+}
+
+.signature-placeholder {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    border: 1px dashed #aaa;
+    line-height: 100px;
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+
+
+
+#sellerSignatureName {
+    font-weight: bold;
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .billing-shipping-details {
+        flex-direction: column;
+    }
+
+    .item-table th, .item-table td {
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
